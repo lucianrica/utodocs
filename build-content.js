@@ -19,6 +19,7 @@ function traverseDirr(dir, obj) {
         let fullPath = path.join(dir, result);
         console.log(fullPath)
         
+        
         let name;
         if(fs.lstatSync(fullPath).isFile()) { 
             name = result.slice(0, -3) 
@@ -26,9 +27,10 @@ function traverseDirr(dir, obj) {
             name = result
         }
 
-        let baseUrl = "https://raw.githubusercontent.com/lucianrica/utodocs/main/docs"
-        let url = baseUrl + (fullPath.split("utodocs\\docs"))[1]
+        let baseUrl = "https://raw.githubusercontent.com/lucianrica/utodocs/main"
+        let url = baseUrl + (fullPath.split(global.appRoot))[1]
         let convertedUrl = new URL(url).toString();
+        console.log(convertedUrl)
 
         let newChild = {
             "name": name,

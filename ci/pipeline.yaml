@@ -168,8 +168,7 @@ jobs:
             export CHROME_BIN=/usr/bin/chromium-browse
             pwd
             npm i -g heroku
-            cd files
-            npm run lint
+            ls
 
 
 

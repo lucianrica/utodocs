@@ -28,6 +28,12 @@
 ```
 
 
+### Destroy Pipeline
+```shell
+    fly -t utodocs destroy-pipeline -p utodocs
+```
+
+
 
 ## temp test pipeline settings
 
