@@ -1,0 +1,204 @@
+# fly -t angular set-pipeline --pipeline angular --config pipeline.yaml --load-vars-from ./cd/credentials.yaml
+
+---
+resources:
+- name: develop.git
+  type: git
+  icon: github
+  source:
+    uri: https://github.com/lucianrica/utodocs.git
+    branch: develop
+    private_key: ((private_key))
+    
+- name: main.git
+  type: git
+  icon: github
+  source:
+    uri: https://github.com/lucianrica/utodocs.git
+    branch: main
+    username: ((username))
+    password: ((password))
+
+- name: node-image
+  type: registry-image
+  icon: nodejs
+  source:
+    repository: node
+    tag: 13.10.1-stretch
+
+# - name: every-10000s
+#   type: time
+#   icon: clock-outline
+#   source:
+#     interval: 10000s
+
+jobs:
+
+- name: unit-tests
+  public: true
+  plan:
+  # - get: every-10000s
+  - get: node-image
+  - get: develop.git
+    trigger: true
+  - task: run-tests
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: develop.git
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
+            export NG_CLI_ANALYTICS="false"
+            cd develop.git
+            pwd
+            npm install --silent
+            npm run lint
+
+- name: linting
+  public: true
+  plan:
+  # - get: every-10000s
+  - get: node-image
+  - get: develop.git
+    trigger: true
+  - task: run-tests
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: develop.git
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
+            export NG_CLI_ANALYTICS="false"
+            export CHROME_BIN=/usr/bin/chromium-browser
+            cd develop.git
+            pwd
+            npm install --silent
+            npm run lint
+
+- name: e2e-tests
+  public: true
+  plan:
+  # - get: every-10000s
+  - get: node-image
+  - get: develop.git
+    trigger: true
+  - task: e2e-tests
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: develop.git
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
+            export NG_CLI_ANALYTICS="false"
+            export CHROME_BIN=/usr/bin/chromium-browser
+            cd develop.git
+            pwd
+            npm install --silent
+            npm run lint
+
+- name: push-to
+  plan:
+  - get: develop.git
+    passed: [unit-tests,linting, e2e-tests]
+    trigger: true
+  - put: main.git
+    params: { repository: develop.git }
+
+- name: build-and-deploy
+  public: true
+  plan:
+  # - get: every-10000s
+  - get: node-image
+  - get: main.git
+    passed: [push-to]
+    trigger: true
+  - task: build-content
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: main.git
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
+            export NG_CLI_ANALYTICS="false"
+            export CHROME_BIN=/usr/bin/chromium-browse
+            cd main.git
+            pwd
+            npm install
+            npm run build-content
+      outputs:
+        - name: files
+  - task: deploy-to-heroku
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: files          
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
+            export NG_CLI_ANALYTICS="false"
+            export CHROME_BIN=/usr/bin/chromium-browse
+            pwd
+            npm i -g heroku
+            cd files
+            npm run lint
+
+
+
+# - name: deploy-to-heroku
+#   public: true
+#   plan: 
+#   - get: files
+#     passed: [build-content]
+#     trigger: true
+#   - task: deploy-to-heroku
+#     image: node-image
+#     config:
+#       platform: linux
+#       inputs:
+#         - name: files          
+#       run:
+#         path: /bin/sh
+#         args:
+#           - -c
+#           - |
+#             echo "Node Version: $(node --version)"
+#             echo "NPM Version: $(npm --version)"
+#             export NG_CLI_ANALYTICS="false"
+#             export CHROME_BIN=/usr/bin/chromium-browse
+#             cd main.git
+#             pwd
+#             npm install
+#             npm run build-content
+
+
+
+# git add . && git commit -m "test pipeline failure" && git push

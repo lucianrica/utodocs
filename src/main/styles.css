@@ -1,0 +1,90 @@
+@import "../../node_modules/prismjs/themes/prism.css";
+@import "../../node_modules/prismjs/themes/prism-okaidia.css";
+
+
+:root {
+  --primaryBlue: #2b3a42;
+  --primaryWhite: #fff;
+  --hoverBlue: rgba(141, 214, 249, 0.35);
+  --primarySubHeader: #f2f2f2;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: calc(100vw - (100vw - 100%));
+  overflow-x: hidden;
+  font: 400 16px "Source Sans Pro", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif;
+  color: #2b3a42;
+  overflow-y: scroll;
+}
+
+a,
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: local("Source Serif Pro"),
+    url(../assets/fonts/SourceSans/SourceSansPro-Regular.ttf) format("truetype");
+}
+
+.markdown {
+  padding: 1.5em 1em;
+  font-family: "Source Serif Pro", ui-serif, Georgia, Cambria, Times New Roman,
+    Times, serif;
+  line-height: 1.8em;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: #32434a;
+  display: block;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.25em;
+  word-break: break-word;
+  margin-top: 36px;
+}
+
+.markdown h1 {
+  font-size: 33.1776px;
+  margin-top: 36px;
+}
+
+.markdown h2 {
+  font-size: 27.648px;
+}
+
+.markdown p {
+  margin: 16px 0;
+  text-align: justify;
+}
+
+.markdown ul li {
+  list-style: disc;
+}
+
+.markdown ul {
+  padding-left: 30px;
+  /* line-height: 30px; */
+}
+
+

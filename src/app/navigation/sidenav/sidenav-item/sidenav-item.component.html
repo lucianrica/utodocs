@@ -1,0 +1,15 @@
+<div class="sidebar-item " (click)="clickEvent()" [ngClass]="status ? 'sidebar-item--open' : ''">
+
+    <img *ngIf="item.type == 'dir'" src="../../../../assets/img/arrow.svg" alt="arrow" class="sidebar-item__toggle">
+    <img *ngIf="item.type == 'file'" src="../../../../assets/img/bar.svg" alt="hidden" class="sidebar-item__toggle2">
+
+    <p *ngIf="item.type == 'file'" (click)="sendLinkPath()" class="nav-link-class pointer">{{ item.name }} </p>
+    <p *ngIf="item.type == 'dir'" class="sidebar-item__title pointer">{{ item.name }}</p>
+
+    <ul *ngIf="item.type == 'dir'" class="sidebar-item__anchors" (click)="$event.stopPropagation()">
+        <!-- <p *ngIf="item.type == 'dir'" class="nav-link-class" style="font-weight: 500; color: rgb(1, 146, 146)">{{ link.name }}</p> -->
+        <app-sidenav-link style="width: 100%; cursor: pointer;" *ngFor="let c of item.children" [c]="c">
+        </app-sidenav-link>
+    </ul>
+
+</div>

@@ -1,0 +1,7 @@
+.docs-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px 745px 1fr;
+  gap: 15px;
+  min-height: 95vh;
+  margin-top: 35px;  
+}
