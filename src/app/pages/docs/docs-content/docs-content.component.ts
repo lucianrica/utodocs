@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
 import { DocsInteractionService } from 'src/app/services/docs-interaction.service';
 import sideNavData from '../../../../assets/navbar/sidenav.json';
-import Prism from 'prismjs';
-import loadLanguages from 'prismjs/components/';
-
-
 import { SintaxHighlightingService } from "../../../services/sintax-highlighting.service"
+import Prism from 'prismjs';
 
 
 @Component({
