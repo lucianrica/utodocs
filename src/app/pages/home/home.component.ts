@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Prism from 'prismjs';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent{ }
+export class HomeComponent{ 
+    Prism = Prism
+}
