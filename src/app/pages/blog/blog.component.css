@@ -1,0 +1,4 @@
+.blog-grid {
+    min-height: calc(100vh - 163px);
+    padding-bottom: 100px;
+}
