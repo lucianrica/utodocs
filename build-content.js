@@ -17,20 +17,24 @@ function traverseDirr(dir, obj) {
 
     fs.readdirSync(dir).forEach(result => {
         let fullPath = path.join(dir, result);
-        console.log(fullPath)
-        
-        
+        // console.log(fullPath)
+
+
         let name;
-        if(fs.lstatSync(fullPath).isFile()) { 
-            name = result.slice(0, -3) 
+        if (fs.lstatSync(fullPath).isFile()) {
+            name = result.slice(0, -3)
         } else {
             name = result
         }
 
-        let baseUrl = "https://raw.githubusercontent.com/lucianrica/utodocs/main"
+
+        let branch = 'main'
+        if (process.env.NODE_ENV !== 'production') branch = 'develop'
+        
+        let baseUrl = `https://raw.githubusercontent.com/lucianrica/utodocs/${branch}`
         let url = baseUrl + (fullPath.split(global.appRoot))[1]
         let convertedUrl = new URL(url).toString();
-        console.log(convertedUrl)
+        // console.log(convertedUrl)
 
         let newChild = {
             "name": name,
@@ -59,7 +63,7 @@ traverseDirr(docsDir, obj);
 const saveToJson = (obj) => {
     // convert JSON object to string
     const data = JSON.stringify(obj);
-    
+
     // write JSON string to a file
     fs.writeFile('src/assets/navbar/sidenav.json', data, err => {
         if (err) throw err
