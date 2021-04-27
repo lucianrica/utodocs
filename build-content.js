@@ -34,7 +34,7 @@ function traverseDirr(dir, obj) {
         let baseUrl = `https://raw.githubusercontent.com/lucianrica/utodocs/${branch}`
         let url = baseUrl + (fullPath.split(global.appRoot))[1]
         let convertedUrl = new URL(url).toString();
-        // console.log(convertedUrl)
+        console.log(convertedUrl)
 
         let newChild = {
             "name": name,

@@ -4,6 +4,7 @@ First of all I would like to say thank you for taking an interest into utodocs a
 We are thrilled to see you here and hope you are enjoying our product so far, and just to keep you posted, we are always working to make utodocs exactly what you need for your live
 application and your feedback helps us decide which features to build, and what improvements should be made to our product. 
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ## Assumptions
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum architecto consequatur vel, asperiores

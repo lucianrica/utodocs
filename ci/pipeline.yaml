@@ -118,7 +118,6 @@ jobs:
   plan:
   - get: develop.git
     passed: [unit-tests,linting, e2e-tests]
-    trigger: true
   - put: main.git
     params: { repository: develop.git }
 
