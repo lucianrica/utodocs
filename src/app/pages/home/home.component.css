@@ -20,13 +20,13 @@ Reference: https://webdesign.tutsplus.com/articles/pure-css-animation-inspiratio
   /* opacity: 0.6; */
   color: black;
   position: absolute;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 50px;
   letter-spacing: 1px;
   top: 150px;
   width: 600px;
   text-align: center;
-  left: 45%;
+  left: 43%;
 }
 
 .bike {
