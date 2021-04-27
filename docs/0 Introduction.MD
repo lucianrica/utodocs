@@ -1,12 +1,8 @@
 
-
-# Introduction to the app Docs
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum architecto consequatur vel, asperiores
-        soluta earum voluptatem, ipsam sit eveniet, sapiente perferendis exercitationem quibusdam aut culpa distinctio
-        natus obcaecati nam quae modi repudiandae aperiam sunt enim! Natus, delectus dolor voluptatibus assumenda
-        laborum, placeat repudiandae ullam quaerat cum excepturi numquam in saepe magnam. Voluptatem, fuga nisi numquam
-        architecto sapiente, labore nulla cupiditate dolor reprehenderit animi quas harum rerum ut unde quo nihil cumque
-        dolorum distinctio possimus quis quisquam, quasi dicta nobis alias. Vero at omnis iure perspiciatis eius velit
+# Welcome to utodocs
+First of all I would like to say thank you for taking an interest into utodocs automation.
+We are thrilled to see you here and hope you are enjoying our product so far, and just to keep you posted, we are always working to make utodocs exactly what you need for your live
+application and your feedback helps us decide which features to build, and what improvements should be made to our product. 
 
 
 ## Assumptions
