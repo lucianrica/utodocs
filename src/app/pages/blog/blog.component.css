@@ -1,4 +1,142 @@
 .blog-grid {
-    min-height: calc(100vh - 163px);
-    padding-bottom: 100px;
+  min-height: calc(100vh - 163px);
+  padding-bottom: 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 280px 745px 1fr;
+  gap: 15px;
+  padding-top: 35px;
+}
+
+.markdown {
+  padding: 21px 24px;
+  font-family: "Source Serif Pro", ui-serif, Georgia, Cambria, Times New Roman,
+    Times, serif;
+  line-height: 1.8em;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: #32434a;
+  display: block;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 0.25em;
+  word-break: break-word;
+  margin-top: 36px;
+}
+
+.markdown h1 {
+  font-size: 33.1776px;
+  margin-top: 36px;
+}
+
+.markdown h2 {
+  font-size: 27.648px;
+}
+
+.markdown p {
+  margin: 16px 0;
+}
+
+.markdown ul li {
+  list-style: disc;
+}
+
+.markdown ul {
+  padding-left: 30px;
+  /* line-height: 30px; */
+}
+
+/* Reference https://codepen.io/wontem/pen/PqYXop/ */
+.view {
+  margin: 20vh 0;
+  grid-column: 1/3;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 400; */
+  z-index: 0;
+}
+
+.plane {
+  width: 320px;
+  height: 60vh;
+  transform-style: preserve-3d;
+}
+.plane.main {
+  margin: auto;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  -webkit-animation: rotate 20s infinite linear;
+  animation: rotate 20s infinite linear;
+}
+.plane.main .circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px rgba(20, 180, 220, 0.555),
+    inset 0 0 60px rgba(20, 180, 220, 0.555);
+}
+.plane.main .circle::before,
+.plane.main .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: rgba(20, 180, 220, 0.555);
+  box-sizing: border-box;
+  box-shadow: 0 0 60px 2px rgba(20, 180, 220, 0.555);
+}
+.plane.main .circle::before {
+  transform: translateZ(-90px);
+}
+.plane.main .circle::after {
+  transform: translateZ(90px);
+}
+.plane.main .circle:nth-child(1) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(2) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(3) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(4) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(5) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
 }
