@@ -80,7 +80,7 @@ a:hover {
 
 .markdown p {
   margin: 16px 0;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .markdown ul li {
