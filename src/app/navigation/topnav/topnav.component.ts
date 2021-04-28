@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 
 export class TopnavComponent {
     appName = 'utodocs'
+
+    setActiveClass() {
+        return "active"
+    }
 }

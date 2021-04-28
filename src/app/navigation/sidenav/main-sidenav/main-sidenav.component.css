@@ -185,3 +185,8 @@
 .pointer {
   cursor: pointer;
 }
+
+.link-active {
+    font-weight: 500;
+}
+
