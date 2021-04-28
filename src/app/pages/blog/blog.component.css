@@ -140,3 +140,13 @@
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
+
+.scroll-to-top {
+  margin-top: 40px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 10px 40px;
+  color: rgb(37, 168, 124);
+  font-weight: 800;
+  cursor: pointer;
+}

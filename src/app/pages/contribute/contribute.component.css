@@ -13,19 +13,20 @@
 }
 
 .contribute-img {
-    width: 100%;
-    max-width: 400px;
-    animation: MoveUp 5s linear forwards;
+  width: 100%;
+  max-width: 400px;
+  animation: MoveUp 5s linear forwards;
 }
 
 @keyframes MoveUp {
-    0%, 100% {
-      transform: translateY(-500px);
-    }
-    0% {
-        transform: translateY(85vh);
-    }
+  0%,
+  100% {
+    transform: translateY(-500px);
   }
+  0% {
+    transform: translateY(85vh);
+  }
+}
 
 .markdown {
   padding: 21px 24px;
@@ -68,4 +69,14 @@
 .markdown ul {
   padding-left: 30px;
   /* line-height: 30px; */
+}
+
+.scroll-to-top {
+  margin-top: 40px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 10px 40px;
+  color: rgb(37, 168, 124);
+  font-weight: 800;
+  cursor: pointer;
 }

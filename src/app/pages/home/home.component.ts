@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
 import Prism from 'prismjs';
 
 @Component({
@@ -9,4 +10,15 @@ import Prism from 'prismjs';
 
 export class HomeComponent{ 
     Prism = Prism
+
+    pageYoffset: number = 0; 
+    @HostListener('window:scroll', ['$event']) onScroll(event){
+        this.pageYoffset = window.pageYOffset;
+     }
+    
+    constructor(private scroll: ViewportScroller) { }
+    
+    scrollToTop(){
+        this.scroll.scrollToPosition([0,0]);
+    }
 }

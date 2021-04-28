@@ -79,6 +79,10 @@
             the cleanup process.
         </p>
 
+        <button (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0" >
+            Back To Top 
+        </button>
+
     </div>
     <div></div>
 </div>

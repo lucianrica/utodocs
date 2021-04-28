@@ -3,6 +3,18 @@
   grid-template-columns: 1fr 280px 745px 1fr;
   gap: 15px;
   min-height: 95vh;
-  margin-top: 35px;  
+  margin-top: 35px;
   padding-bottom: 100px;
+}
+
+.scroll-to-top {
+  margin-top: 40px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 10px 40px;
+  color: rgb(37, 168, 124);
+  font-weight: 800;
+  cursor: pointer;
+  max-width: fit-content;
+  margin-left: 24px;
 }

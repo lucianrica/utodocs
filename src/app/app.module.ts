@@ -57,7 +57,13 @@ const routes: Routes = [
         }),
         MarkdownModule.forChild(),
         BrowserModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, {
+            // Restore the last scroll position
+            scrollPositionRestoration: "enabled",
+            scrollOffset: [0, 0],
+            // Enable scrolling to anchors
+            anchorScrolling: "enabled",
+          })
     ],
     providers: [
         SintaxHighlightingService
