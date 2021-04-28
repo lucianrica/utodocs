@@ -1,0 +1,304 @@
+<app-topnav></app-topnav>
+<app-sub-topnav></app-sub-topnav>
+<div class="markdown-cheatsheet-grid">
+    <div></div>
+    <div></div>
+    <div class="markdown">
+
+
+        <h1>Markdown Cheatsheet</h1>
+        <p>
+            The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea
+            is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s
+            been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several
+            existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format
+            of plain text email.
+        </p>
+        <p>
+            This is intended as a quick reference and showcase. For more complete info, see John Gruber's original spec
+            and the Github-flavored Markdown info page.
+        </p>
+
+        <h2>Headings</h2>
+        <p>
+            To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use
+            should correspond to the heading level. For example, to create a heading level three (
+            &lt;h3&gt;), use three number signs (e.g., ### My Header).
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    HTML
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    # Heading level 1
+                </td>
+                <td>
+                    &lt;h1&gt;Heading level 1&lt;/h1&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ## Heading level 2
+                </td>
+                <td>
+                    &lt;h2&gt;Heading level 2&lt;/h2&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ### Heading level 3
+                </td>
+                <td>
+                    &lt;h3&gt;Heading level 3&lt;/h3&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    #### Heading level 4
+                </td>
+                <td>
+                    &lt;h4&gt;Heading level 4&lt;/h4&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ##### Heading level 5
+                </td>
+                <td>
+                    &lt;h5&gt;Heading level 5&lt;/h5&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ###### Heading level 6
+                </td>
+                <td>
+                    &lt;h6&gt;Heading level 6&lt;/h6&gt;
+                </td>
+            </tr>
+
+
+        </table>
+
+        <h2>Paragraphs</h2>
+        <p>To create paragraphs, use a blank line to separate one or more lines of text</p>
+
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    HTML
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>I really like using Markdown.</p>
+                    <p>I think I'll use it to format all of my documents from now on.</p>
+                </td>
+                <td>
+                    &lt;p&gt; I really like using Markdown. &lt;/p&gt;
+                    <br>
+                    <br>
+                    &lt;p&gt; I think I'll use it to format all of my documents from now on. &lt;/p&gt;
+                </td>
+            </tr>
+        </table>
+
+        <h2>Emphasis</h2>
+        <p>You can add emphasis by making text bold or italic.</p>
+
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    HTML
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    I just love **bold text**.
+                </td>
+                <td>
+                    I just love &lt;strong&gt;bold text&lt;strong&gt;.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Italicized text is the *cat's meow*.
+                </td>
+                <td>
+                    Italicized text is the &lt;/em&gt;cat's meow&lt;/em&gt;.
+                </td>
+            </tr>
+
+        </table>
+
+        <h2>Blockquotes</h2>
+        <p>To create a blockquote, add a > in front of a paragraph.</p>
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    Rendered Output
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    > Dorothy followed her through many of the beautiful rooms in her castle.
+                </td>
+                <td>
+                    <div
+                        style="background: rgb(228, 228, 228); border-radius: 0 5px 5px 0; border-left: 5px solid gray; padding: 5px;">
+                        Dorothy followed her through many of the beautiful rooms in her castle.
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <h2>Lists</h2>
+        <p>To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be in
+            numerical order, but the list should start with the number one.</p>
+        <p>To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items. Indent
+            one or more items to create a nested list.</p>
+
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    HTML
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>1. First item</p>
+                    <p>2. Second item</p>
+                </td>
+                <td>
+                    <div>
+
+                        &lt;ol&gt;<br>
+                        &lt;li&gt;First item&lt;/li&gt;<br>
+                        &lt;li&gt;Second item&lt;/li&gt;<br>
+                        &lt;/ol&gt;
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>- First item</p>
+                    <p>- Second item</p>
+                </td>
+                <td>
+                    <div>
+
+                        &lt;ul&gt;<br>
+                        &lt;li&gt;First item&lt;/li&gt;<br>
+                        &lt;li&gt;Second item&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <h2>Code Blocks</h2>
+        <p>To denote a word or phrase as code, enclose it in backticks (`). If the word or phrase you want to denote as
+            code includes one or more backticks, you can escape it by enclosing the word or phrase in double backticks
+            (``).
+        </p>
+
+        <table>
+            <tr>
+                <th>
+                    Markdown
+                </th>
+                <th>
+                    Rendered Output
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>```</p>
+                    <pre>console.log("my code")</pre>
+                    <p>```</p>
+                </td>
+                <td>
+                    <div style="background: rgb(228, 228, 228); border-radius: 0 5px 5px 0; padding: 5px;">
+                        <pre>console.log("
+    my code
+")</pre>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <h2>Links</h2>
+        <p>To create a link, enclose the link text in brackets (e.g., [Duck Duck Go]) and then follow it immediately
+            with the URL in parentheses (e.g., (https://duckduckgo.com)).</p>
+        <div style="background: rgb(228, 228, 228); border-radius: 0 5px 5px 0; padding: 5px;">
+            My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+        </div>
+
+        <h2>Formatting Links</h2>
+        <p>To emphasize links, add asterisks before and after the brackets and parentheses. To denote links as code, add
+            backticks in the brackets.</p>
+        <div style="background: rgb(228, 228, 228); border-radius: 0 5px 5px 0; padding: 5px;">
+            This is the *[Markdown Guide](https://www.markdownguide.org)*.
+        </div>
+
+        <h2>Images</h2>
+        <p>
+            To add an image, add an exclamation mark (!), followed by alt text in brackets, and the path or URL to the
+            image asset in parentheses. You can optionally add a title after the URL in the parentheses.
+        </p>
+        <div style="background: rgb(228, 228, 228); border-radius: 0 5px 5px 0; padding: 5px;">
+            ![Philadelphia's Magic Gardens. This place was so cool!](/assets/images/philly-magic-gardens.jpg
+            "Philadelphia's Magic Gardens")
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like
+            change the font size, color, or type — just the essentials, using keyboard symbols you already know.</p>
+
+
+        <h2>ACKNOWLEDGEMENTS</h2>
+        <p>
+            Aaron Swartz deserves a tremendous amount of credit for his feedback on the design of Markdown’s formatting
+            syntax. Markdown is much better thanks to Aaron’s ideas, feedback, and testing. Also, Aaron’s html2text is a
+            very handy (and free) utility for turning HTML into Markdown-formatted plain text.
+        </p>
+        <p>
+            Nathaniel Irons, Dan Benjamin, Daniel Bogan, and Jason Perkins also deserve thanks for their feedback.
+        </p>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+
+
+
+    <button (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
+        Back To Top
+    </button>
+
+</div>

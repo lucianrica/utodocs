@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "dev": "node build-content.js & ng serve --open --port 4200",
+    "dev": "node build-content.js & ng serve --port 4200",
     "build": "node build-content.js & ng build --prod",
     "build-content": "node build-content.js",
     "heroku-postbuild": "node build-content.js & ng build --prod",
