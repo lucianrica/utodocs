@@ -1,7 +1,6 @@
 @import "../../node_modules/prismjs/themes/prism.css";
 @import "../../node_modules/prismjs/themes/prism-okaidia.css";
 
-
 :root {
   --primaryBlue: #2b3a42;
   --primaryWhite: #fff;
@@ -49,7 +48,8 @@ a:hover {
   line-height: 1.8em;
 }
 
-.markdown h1, .markdown h2 {
+.markdown h1,
+.markdown h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 200;
   line-height: 1.8em;
@@ -93,10 +93,24 @@ a:hover {
 }
 
 .markdown a {
-    color: #42b0ce;
+  color: #42b0ce;
 }
 .markdown a:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
+/*  */
+.markdown div.warning {
+  border-left-style: solid;
+  border-left-width: 3px;
+}
 
+.markdown div.warning {
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #fdfccf;
+  border-left-color: #fff01e;
+  color: #4e7182;
+}
+
+/*  */
