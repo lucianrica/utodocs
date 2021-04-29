@@ -1,7 +1,7 @@
 .sub-topnav {
     position: absolute;
     width: 100%;
-    background: #42b0ce;
+    background: #dfdfdf;
     height: 22px;
     margin-top: -5px;
     display: grid;
@@ -25,8 +25,12 @@
     margin: -2px 12px 0 12px;
 }
 
+.sub-nav a:hover {
+    color: #0b9ac2;
+}
+
 .sub-nav p {
-    color: rgb(37, 37, 37);
+    color:  #c9c9c9;;
     margin-top: -3px;
     cursor: default;
 }
