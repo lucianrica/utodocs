@@ -99,18 +99,21 @@ a:hover {
   font-weight: 600;
 }
 
-/*  */
-.markdown div.warning {
-  border-left-style: solid;
-  border-left-width: 3px;
+.markdown aside.warning {
+    background-color: #fdf5d8;
+    border-left-color: #f3c316;
+    color: #716b53;
+}
+.markdown aside.tip, .markdown aside.todo, .markdown aside.warning {
+    border-left-style: solid;
+    border-left-width: 3px;
 }
 
-.markdown div.warning {
-  max-width: 750px;
-  margin: 0 auto;
-  background-color: #fdfccf;
-  border-left-color: #fff01e;
-  color: #4e7182;
+.markdown aside {
+    border-left: 4px solid #ddd;
+    color: #666;
+    padding: .75em 1em;
 }
-
-/*  */
+.markdown aside, .markdown blockquote, .markdown p, .markdown pre, .markdown table {
+    margin: 1em 0;
+}
