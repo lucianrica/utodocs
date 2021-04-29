@@ -92,4 +92,11 @@ a:hover {
   /* line-height: 30px; */
 }
 
+.markdown a {
+    color: #42b0ce;
+}
+.markdown a:hover {
+    font-weight: 600;
+}
+
 

@@ -5,5 +5,4 @@ private_key: |
 >      -----END OPENSSH PRIVATE KEY-----
 
 > username: git user name or email
-
 > password: password

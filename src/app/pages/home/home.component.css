@@ -3981,7 +3981,22 @@ h2 {
   border-left-style: solid;
   border-left-width: 3px;
 }
+/*  */
+.markdown div.warning {
+  border-left-style: solid;
+  border-left-width: 3px;
+}
 
+.markdown div.tip {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fdfccf;
+    border-left-color: #fff01e;
+    color: #4e7182;
+  }
+
+
+/*  */
 .markdown aside {
   border-left: 4px solid #ddd;
   color: #666;
