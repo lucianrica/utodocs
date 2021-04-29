@@ -5,7 +5,7 @@
   --primaryBlue: #2b3a42;
   --primaryWhite: #fff;
   --hoverBlue: rgba(141, 214, 249, 0.35);
-  --primarySubHeader: #f2f2f2;
+  --primarySubHeader: #f2f2f2; 
 }
 
 *,
@@ -131,7 +131,7 @@ span.token.operator {
     background: #272822;
 }
 
-code {
+pre, code {
     background: rgb(212, 212, 212);
     border-radius: 3px;
     padding: 0 5px;
