@@ -99,22 +99,30 @@ a:hover {
   font-weight: 600;
 }
 
-.markdown div.warning {
-    background-color: #fdf5d8;
-    border-left-color: #f3c316;
-    color: #716b53;
+.markdown aside.warning {
+  background-color: #fdf5d8;
+  border-left-color: #f3c316;
+  color: #716b53;
 }
-.markdown div.warning {
-    border-left-style: solid;
-    border-left-width: 3px;
+.markdown aside.warning {
+  border-left-style: solid;
+  border-left-width: 3px;
 }
 
-.markdown pre {
-    background-color: hsla(0,0%,93.3%,.35);
-    background-color: #2b3a42;
-    border-radius: 3px;
-    font-size: 13px;
-    line-height: 19px;
-    overflow: auto;
-    padding: 8px 16px;
+.markdown aside {
+  border-left: 4px solid #ddd;
+  color: #666;
+  padding: 0.75em 1em;
+}
+
+.markdown aside,
+.markdown blockquote,
+.markdown p,
+.markdown pre,
+.markdown table {
+  margin: 1em 0;
+}
+
+.warning__prefix {
+  font-weight: 700;
 }

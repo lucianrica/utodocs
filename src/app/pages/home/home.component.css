@@ -3982,6 +3982,10 @@ h2 {
   border-left-width: 3px;
 }
 
+.tip__prefix {
+    font-weight: 700;
+}
+
 .markdown aside {
   border-left: 4px solid #ddd;
   color: #666;
