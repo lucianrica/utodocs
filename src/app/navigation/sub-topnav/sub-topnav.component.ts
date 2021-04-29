@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./sub-topnav.component.css']
 })
 
-export class SubTopnavComponent { }
+export class SubTopnavComponent { 
+    setActiveClass() {
+        return "active"
+    }
+}
