@@ -20,6 +20,7 @@ import { SidenavLinkComponent } from './navigation/sidenav/sidenav-link/sidenav-
 import { SintaxHighlightingService } from './services/sintax-highlighting.service';
 import { SafePipePipe } from './services/safe-pipe.pipe';
 import { MarkdownCheatsheetComponent } from './shared/markdown-cheatsheet/markdown-cheatsheet.component';
+import { WritingDocumentationComponent } from './shared/writing-documentation/writing-documentation.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
     { path: 'docs', component: MainDocsComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'cheatsheet', component: MarkdownCheatsheetComponent },
+    { path: 'guide', component: WritingDocumentationComponent },
     { path: '404', component: NotFoundComponent },
     { path: '**', redirectTo: '/404' }
 ]
@@ -50,7 +52,8 @@ const routes: Routes = [
         SidenavItemComponent,
         SidenavLinkComponent,
         SafePipePipe,
-        MarkdownCheatsheetComponent
+        MarkdownCheatsheetComponent,
+        WritingDocumentationComponent
     ],
     imports: [
         HttpClientModule,

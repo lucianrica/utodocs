@@ -21,13 +21,14 @@
 
 .sub-nav a {
     color: rgb(37, 37, 37);
-    padding: 0 12px;
-    margin-top: -2px;
+    /* padding: 0 12px; */
+    margin: -2px 12px 0 12px;
 }
 
 .sub-nav p {
     color: rgb(37, 37, 37);
     margin-top: -3px;
+    cursor: default;
 }
 
 .active {

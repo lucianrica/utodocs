@@ -1,0 +1,169 @@
+<app-topnav></app-topnav>
+<app-sub-topnav></app-sub-topnav>
+<div class="markdown-cheatsheet-grid">
+    <div></div>
+    <div></div>
+    <div class="markdown">
+
+
+        <h1>A beginner’s guide to writing documentation</h1>
+        <p>
+            This is a guide to documenting your first project. The first time is always the hardest, and I hope this
+            guide will get you started down the righteous path. At the end, you should have a project that is ready for
+            public release.
+        </p>
+        <p>
+            Feel free to read this document straight through, or simply use it as a reference.
+        </p>
+
+        <h2>You will be using your code in 6 months</h2>
+        <p>
+            Code that you wrote 6 months ago is often indistinguishable from code that someone else has written. You
+            will look upon a file with a fond sense of remembrance. Then a sneaking feeling of foreboding, knowing that
+            someone less experienced, less wise, had written it.
+        </p>
+        <p>
+            As you go through this selfless act of untangling things that were obvious or clever months ago, you will
+            start to empathize with your users. If only I had written down why I had done this. Life would be so much
+            simpler. Documentation allows you to transfer the why behind code. Much in the same way code comments
+            explain the why, and not the how, documentation serves the same purpose.
+        </p>
+
+        <h2>You want people to use your code</h2>
+        <p>
+            You have written a piece of code, and released it into the world. You have done this because you think that
+            others might find it useful. However, people need to understand why your code might be useful for them,
+            before they decide to use it. Documentation tells people that this project is for them.
+        </p>
+        <ul>
+            <li>If people don’t know why your project exists,
+                they won’t use it.</li>
+            <li>If people can’t figure out how to install your code,
+                they won’t use it.</li>
+            <li>If people can’t figure out how to use your code,
+                they won’t use it.</li>
+        </ul>
+
+        <p>
+            There are a small number of people who will source dive and use any code out there. That is a vanishingly
+            small number of people, compared to people who will use your code when properly documented. If you really
+            love your project, document it, and let other people use it.
+        </p>
+
+        <h2>You want people to help out</h2>
+        <p>
+            Open source is this magical thing right? You release code, and the code gnomes come and make it better for
+            you.
+        </p>
+        <p>
+            Not quite.
+        </p>
+        <p>
+            There are lots of ways that open source is amazing, but it doesn’t exist outside the laws of physics. You
+            have to put work in, to get work out.
+        </p>
+        <ul>
+            <li>You only get contributions after you have put in a lot of work.</li>
+            <li>You only get contributions after you have users.</li>
+            <li>You only get contributions after you have documentation.</li>
+        </ul>
+        <p>
+            Documentation also provides a platform for your first contributions. A lot of people have never contributed
+            before, and documentation changes are a lot less scary than code changes. If you don’t have documentation,
+            you will miss out on a whole class of contributors.
+        </p>
+
+        <h2>You want your code to be better</h2>
+        <p>
+            It’s really easy to have an idea in your head that sounds perfect, but the act of putting words to paper
+            requires a distillation of thought that may not be so easy.
+        </p>
+        <p>
+            Writing documentation improves the design of your code. Talking through your API and design decisions on
+            paper allows you to think about them in a more formalized way. A nice side effect is that it allows people
+            to contribute code that follows your original intentions as well.
+        </p>
+
+        <h2>You want to be a better writer</h2>
+        <p>
+            Writing documentation is a different form of writing than most people have experience with. Technical
+            writing is an art that doesn’t come naturally. Writing documentation will start you down the road to being a
+            better technical writer, which is a useful skill to have as a programmer.
+        </p>
+        <p>
+            Writing also becomes easier over time. If you don’t write for many months, it is a lot harder to start
+            writing again. Keeping your projects documented will keep you writing at a reasonable cadence.
+        </p>
+        <p>
+            Starting simple is the best way to achieve actual results. I will present a well-paved path to walk down,
+            and after you have the basic idea, you can expand your scope. The tools should be powerful and easy to use.
+            This removes obstacles to actually putting words on the page.
+        </p>
+
+        <h2>What to write</h2>
+        <p>
+            Now we’re getting down to the brass tacks. Making sure that you give your users all the information that
+            they need, but not too much.
+        </p>
+        <p>
+            First, you need to ask yourself who you’re writing for. At first, you generally just need to appeal to two
+            audiences:
+        </p>
+        <ul>
+            <li>Users</li>
+            <li>Developers</li>
+        </ul>
+
+        <p>
+            Users are people who simply want to use your code, and don’t care how it works. Developers are people who
+            want to contribute back to your code.
+        </p>
+
+        <p>
+            A lot of people will come to your docs trying to figure out what exactly your project is. Someone will
+            mention it, or they’ll google a phrase randomly. You should explain what your project does and why it
+            exists.
+        </p>
+
+        <h2>Information for people who want to contribute back</h2>
+        <p>
+            People usually have standards for how they expect things to be done in their projects. You should document
+            these so that if people write code, they can do things in the norm of the project.
+        </p>
+
+        <h2>Installation instructions</h2>
+        <p>
+            Once people figure out whether they want to use your code or not, they need to know how to actually get it
+            and make it run. Hopefully your install instructions should be a couple lines for the basic case. A page
+            that gives more information and caveats should be linked from here if necessary.
+        </p>
+
+        <h2>Your project’s license</h2>
+        <p>
+            BSD? MIT? GPL? This stuff might not matter to you, but the people who want to use your code will care about
+            this a whole lot. Think about what you want to accomplish with your license, and please only pick one of the
+            standard licenses that you see around the web.
+        </p>
+
+        <h2>ACKNOWLEDGEMENTS</h2>
+        <p>
+            Many thanks to Eric Holscher for creating and maintaining this beautiful article about writing documentation for
+            beginers.
+        </p>
+
+
+
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+
+
+
+    <button (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0">
+        Back To Top
+    </button>
+
+</div>
