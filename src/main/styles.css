@@ -123,6 +123,10 @@ a:hover {
   margin: 1em 0;
 }
 
-.warning__prefix {
+.warning .warning__prefix {
   font-weight: 700;
+}
+
+span.token.operator {
+    background: #272822;
 }
