@@ -8,7 +8,7 @@
     "build-content": "node build-content.js",
     "heroku-postbuild": "node build-content.js & ng build --prod",
     "prod": "node server.js",
-    "test": "ng test --watch=false",
+    "test": "ng test --no-watch --no-progress --browsers ChromeHeadlessCI",
     "lint": "ng lint utodocs",
     "e2e": "ng e2e"
   },

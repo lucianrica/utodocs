@@ -17,7 +17,6 @@ import { SubTopnavComponent } from './navigation/sub-topnav/sub-topnav.component
 import { MainSidenavComponent } from './navigation/sidenav/main-sidenav/main-sidenav.component';
 import { SidenavItemComponent } from './navigation/sidenav/sidenav-item/sidenav-item.component';
 import { SidenavLinkComponent } from './navigation/sidenav/sidenav-link/sidenav-link.component';
-import { SintaxHighlightingService } from './services/sintax-highlighting.service';
 import { SafePipePipe } from './services/safe-pipe.pipe';
 import { MarkdownCheatsheetComponent } from './shared/markdown-cheatsheet/markdown-cheatsheet.component';
 import { WritingDocumentationComponent } from './shared/writing-documentation/writing-documentation.component';
@@ -63,6 +62,7 @@ const routes: Routes = [
         }),
         MarkdownModule.forChild(),
         BrowserModule,
+        RouterModule,
         RouterModule.forRoot(routes, {
             // Restore the last scroll position
             scrollPositionRestoration: "enabled",
@@ -71,9 +71,8 @@ const routes: Routes = [
             anchorScrolling: "enabled",
           })
     ],
-    providers: [
-        SintaxHighlightingService
-    ],
+    exports: [ RouterModule ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

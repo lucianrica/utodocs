@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
 import { DocsInteractionService } from 'src/app/services/docs-interaction.service';
 import sideNavData from '../../../../assets/navbar/sidenav.json';
-import { SintaxHighlightingService } from "../../../services/sintax-highlighting.service"
 import Prism from 'prismjs';
 
 
@@ -20,7 +19,6 @@ export class DocsContentComponent implements OnInit {
     Prism = Prism
 
     constructor(
-        private syntaxHiglight: SintaxHighlightingService,
         private markdownService: MarkdownService,
         private docsInteractionService: DocsInteractionService
     ) { }
