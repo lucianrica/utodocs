@@ -8,7 +8,8 @@
 
     <ul *ngIf="item.type == 'dir'" class="sidebar-item__anchors" (click)="$event.stopPropagation()">
         <!-- <p *ngIf="item.type == 'dir'" class="nav-link-class" style="font-weight: 500; color: rgb(1, 146, 146)">{{ link.name }}</p> -->
-        <app-sidenav-link style="width: 100%; cursor: pointer;" *ngFor="let c of item.children" [c]="c">
+        <app-sidenav-link style="width: 100%; cursor: pointer;" *ngFor="let c of item.children" [c]="c"
+            [class.selected]="c === selectedLink" (click)="onSelect(c)" (click)="onSelect(c)">
         </app-sidenav-link>
     </ul>
 

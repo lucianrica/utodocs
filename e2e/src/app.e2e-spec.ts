@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should display Make more time for the things you love, automate the rest', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('utodocs');
+    expect(await page.getTitleText()).toEqual('Make more time for the things you love, automate the rest');
   });
 
   afterEach(async () => {
