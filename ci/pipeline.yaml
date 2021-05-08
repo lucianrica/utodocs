@@ -122,7 +122,7 @@ jobs:
             pwd
             npm install --silent
             npm install karma-chrome-launcher --silent
-            npm run e2e
+            npm run test
 
 - name: push-to
   plan:
