@@ -26,18 +26,18 @@ resources:
     repository: node
     tag: 13.10.1-stretch
 
-# - name: every-10000s
-#   type: time
-#   icon: clock-outline
-#   source:
-#     interval: 10000s
+- name: every-10s
+  type: time
+  icon: clock-outline
+  source:
+    interval: 10s
 
 jobs:
 
 - name: unit-tests
   public: true
   plan:
-  # - get: every-10000s
+  - get: every-10s
   - get: node-image
   - get: develop.git
     trigger: true
@@ -69,7 +69,7 @@ jobs:
 - name: linting
   public: true
   plan:
-  # - get: every-10000s
+  - get: every-10s
   - get: node-image
   - get: develop.git
     trigger: true
@@ -95,7 +95,7 @@ jobs:
 - name: e2e-tests
   public: true
   plan:
-  # - get: every-10000s
+  - get: every-10s
   - get: node-image
   - get: develop.git
     trigger: true
@@ -131,6 +131,26 @@ jobs:
     trigger: true
   - put: main.git
     params: { repository: develop.git }
+
+- name: update-app-version
+  plan:
+  - get: node-image
+  - get: develop.git
+    passed: [push-to]
+    trigger: true
+  - task: update-version
+    image: node-image
+    config:
+      platform: linux
+      inputs:
+        - name: develop.git
+      run:
+        path: /bin/sh
+        args:
+          - -c
+          - |
+            echo "Node Version: $(node --version)"
+            echo "NPM Version: $(npm --version)"
 
 - name: build-and-deploy
   public: true
