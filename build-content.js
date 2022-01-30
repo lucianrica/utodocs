@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require('path');
-const docsDir = path.resolve("docs")
+const docsDir = path.resolve("src/assets/docs")
 global.appRoot = path.resolve(__dirname);
 
 
@@ -17,7 +17,8 @@ function traverseDirr(dir, obj) {
 
     fs.readdirSync(dir).forEach(result => {
         let fullPath = path.join(dir, result);
-        // console.log(fullPath)
+        console.log("=======================")
+        console.log(fullPath)
 
 
         let name;
@@ -28,19 +29,23 @@ function traverseDirr(dir, obj) {
         }
 
 
-        let branch = 'main'
-        if (process.env.NODE_ENV !== 'production') branch = 'develop'
+        // let branch = 'main'
+        // if (process.env.NODE_ENV !== 'production') branch = 'develop'
         
-        let baseUrl = `https://raw.githubusercontent.com/lucianrica/utodocs/${branch}`
-        let url = baseUrl + (fullPath.split(global.appRoot))[1]
-        let convertedUrl = new URL(url).toString();
-        console.log(convertedUrl)
+        // let baseUrl = `https://raw.githubusercontent.com/lucianrica/utodocs/${branch}`
+        // let url = baseUrl + (fullPath.split(global.appRoot))[1]
+        // let convertedUrl = new URL(url).toString();
+        // console.log(convertedUrl)
+
+
 
         let newChild = {
             "name": name,
             "fullPath": fullPath,
-            "url": convertedUrl
+            "url": (fullPath.split("assets"))[1]
         }
+
+        console.log(newChild)
 
         if (fs.lstatSync(fullPath).isDirectory()) {
             newChild["type"] = "dir"

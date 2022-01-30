@@ -3,6 +3,7 @@ import { MarkdownService } from 'ngx-markdown';
 import { DocsInteractionService } from 'src/app/services/docs-interaction.service';
 import sideNavData from '../../../../assets/navbar/sidenav.json';
 import Prism from 'prismjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class DocsContentComponent implements OnInit {
 
     constructor(
         private markdownService: MarkdownService,
-        private docsInteractionService: DocsInteractionService
+        private docsInteractionService: DocsInteractionService,
+        private http: HttpClient
     ) { }
 
     public data: {
@@ -32,6 +34,8 @@ export class DocsContentComponent implements OnInit {
 
 
     ngOnInit() {
+
+
         if (!this.message) {
             this.provideDefaultValue();
             this.fetchAndTransform(this.message);
@@ -41,14 +45,17 @@ export class DocsContentComponent implements OnInit {
         })
     }
 
-        
-    fetchAndTransform(message) {
 
-        fetch(message)
-            .then(response => response.text())
-            .then(data => {
-                this.parsed = this.markdownService.compile(data);
-            });
+    fetchAndTransform(message) {
+        this.http
+            .get(`assets\\${message}`, { responseType: 'text' })
+            .subscribe(data => { this.parsed = this.markdownService.compile(data) })
+
+        // fetch(message)
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         this.parsed = this.markdownService.compile(data);
+        //     });
     }
 
     provideDefaultValue() {

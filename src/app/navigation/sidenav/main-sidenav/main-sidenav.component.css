@@ -193,3 +193,8 @@
 .selected {
     font-weight: 500;
 }
+
+.sidebar-item img {
+    height: 15px;
+    width: 20px;
+}
