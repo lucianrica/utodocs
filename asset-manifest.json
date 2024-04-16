@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/utodocs/static/css/main.f855e6bc.css",
+    "main.js": "/utodocs/static/js/main.edbe9e3c.js",
+    "static/js/453.4aa68784.chunk.js": "/utodocs/static/js/453.4aa68784.chunk.js",
+    "static/media/logo.svg": "/utodocs/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/utodocs/index.html",
+    "main.f855e6bc.css.map": "/utodocs/static/css/main.f855e6bc.css.map",
+    "main.edbe9e3c.js.map": "/utodocs/static/js/main.edbe9e3c.js.map",
+    "453.4aa68784.chunk.js.map": "/utodocs/static/js/453.4aa68784.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.edbe9e3c.js"
+  ]
+}
