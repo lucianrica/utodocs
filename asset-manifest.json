@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/utodocs/static/css/main.0042bc13.css",
-    "main.js": "/utodocs/static/js/main.63235c85.js",
+    "main.js": "/utodocs/static/js/main.5531c8a3.js",
     "index.html": "/utodocs/index.html",
     "main.0042bc13.css.map": "/utodocs/static/css/main.0042bc13.css.map",
-    "main.63235c85.js.map": "/utodocs/static/js/main.63235c85.js.map"
+    "main.5531c8a3.js.map": "/utodocs/static/js/main.5531c8a3.js.map"
   },
   "entrypoints": [
     "static/css/main.0042bc13.css",
-    "static/js/main.63235c85.js"
+    "static/js/main.5531c8a3.js"
   ]
 }
